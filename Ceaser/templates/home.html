@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="jumbotron">
+      <h1>Welcome to the Ceaser !</h1>
+      <h2>Hello {{ user.username }}</h2>
+    </div>
+</div>
+<div class="container">
+  <form enctype="multipart/form-data" action="upload" method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+      <label>Document Name</label>
+      <input type="text" name="doc_name" class="form-control" placeholder="Insert Name Here!!">
+    </div>
+    <div class="form-group">
+      <label>Upload Document</label>
+      <input type="file" name="doc_img" class="form-control-file">
+    </div>
+    <div class="form-group">
+      <label>Document Description</label>
+      <textarea class="form-control" name="doc_desc" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <label>Date</label>
+      <input type="date" name="doc_date" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Upload</button>
+  </form>
+</div>
+{% endblock %}

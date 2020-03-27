@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block css %}
+<style>
+  #text {
+    text-align: center;
+  }
+  
+  #left{
+  float:left;
+  width:50%;
+  overflow:hidden;
+  }
+  
+  #right{
+  float:left;
+  width:50%;
+  overflow:hidden;
+  } 
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="jumbotron" id="maindiv">
+    <h1 id="text">processed text</h1>
+    <h2 id="text">Hello {{ user.username }}</h2>
+  </div>
+</div>
+<div class="container">
+  <div id="left">
+    <img src="media/{{ Data.0.document_img }}" width="500px"/>
+  </div>
+  <div id="right">
+    <pre>
+      {{ processed_img }}
+    </pre>
+  </div>  
+</div>
+{% endblock %}
