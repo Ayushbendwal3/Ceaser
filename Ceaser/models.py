@@ -12,7 +12,7 @@ class UserProfileInfo(models.Model):
 class Document(models.Model):
     document_id = models.AutoField
     document_name = models.CharField(max_length=50, null=False, blank=False, default="")
-    document_img = models.ImageField(upload_to='media', default="", blank=False, null=False)
+    document_img = models.ImageField(upload_to='Images', default="", blank=False, null=False)
     document_desc = models.CharField(max_length=500, default="", blank=False, null=False)
     document_date = models.DateField()
 
