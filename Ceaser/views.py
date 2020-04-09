@@ -36,7 +36,7 @@ def upload(request):
         doc = Document.objects.all()
         temp_list = list(Document.objects.values_list('document_img'))
         for i in range(0, len(temp_list)):
-        temp_list[i] = list(temp_list[i])
+            temp_list[i] = list(temp_list[i])
 
         new_doc = []
         new_doc = temp_list[-1]
