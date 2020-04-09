@@ -4,18 +4,18 @@
   #text {
     text-align: center;
   }
-  
+
   #left {
-    float:left;
-    width:50%;
-    overflow:hidden;
+    float: left;
+    width: 50%;
+    overflow: hidden;
   }
-  
+
   #right {
-    float:left;
-    width:50%;
-    overflow:hidden;
-  } 
+    float: left;
+    width: 50%;
+    overflow: hidden;
+  }
 </style>
 {% endblock %}
 
@@ -28,12 +28,12 @@
 </div>
 <div class="container">
   <div id="left">
-    <img src="media/{{ Data.0.document_img }}" width="500px"/>
+    <img src="media/{{ Data.0.document_img }}" width="500px" />
   </div>
   <div id="right">
     <pre>
       {{ processed_img }}
     </pre>
-  </div>  
+  </div>
 </div>
 {% endblock %}
